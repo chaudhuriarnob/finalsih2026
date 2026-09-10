@@ -1,0 +1,52 @@
+<svg class="ashoka-chakra-white-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="46" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="50" cy="50" r="7" fill="#FFFFFF"/>
+  <polygon points="57.00,51.20 74.00,52.00 94.50,50.00 74.00,48.00 57.00,48.80" fill="#FFFFFF"/>
+  <polygon points="56.45,52.97 72.66,58.14 92.98,61.52 73.70,54.28 57.07,50.65" fill="#FFFFFF"/>
+  <polygon points="55.46,54.54 69.78,63.73 88.54,72.25 71.78,60.27 56.66,52.46" fill="#FFFFFF"/>
+  <polygon points="54.10,55.80 65.56,68.38 81.47,81.47 68.38,65.56 55.80,54.10" fill="#FFFFFF"/>
+  <polygon points="52.46,56.66 60.27,71.78 72.25,88.54 63.73,69.78 54.54,55.46" fill="#FFFFFF"/>
+  <polygon points="50.65,57.07 54.28,73.70 61.52,92.98 58.14,72.66 52.97,56.45" fill="#FFFFFF"/>
+  <polygon points="48.80,57.00 48.00,74.00 50.00,94.50 52.00,74.00 51.20,57.00" fill="#FFFFFF"/>
+  <polygon points="47.03,56.45 41.86,72.66 38.48,92.98 45.72,73.70 49.35,57.07" fill="#FFFFFF"/>
+  <polygon points="45.46,55.46 36.27,69.78 27.75,88.54 39.73,71.78 47.54,56.66" fill="#FFFFFF"/>
+  <polygon points="44.20,54.10 31.62,65.56 18.53,81.47 34.44,68.38 45.90,55.80" fill="#FFFFFF"/>
+  <polygon points="43.34,52.46 28.22,60.27 11.46,72.25 30.22,63.73 44.54,54.54" fill="#FFFFFF"/>
+  <polygon points="42.93,50.65 26.30,54.28 7.02,61.52 27.34,58.14 43.55,52.97" fill="#FFFFFF"/>
+  <polygon points="43.00,48.80 26.00,48.00 5.50,50.00 26.00,52.00 43.00,51.20" fill="#FFFFFF"/>
+  <polygon points="43.55,47.03 27.34,41.86 7.02,38.48 26.30,45.72 42.93,49.35" fill="#FFFFFF"/>
+  <polygon points="44.54,45.46 30.22,36.27 11.46,27.75 28.22,39.73 43.34,47.54" fill="#FFFFFF"/>
+  <polygon points="45.90,44.20 34.44,31.62 18.53,18.53 31.62,34.44 44.20,45.90" fill="#FFFFFF"/>
+  <polygon points="47.54,43.34 39.73,28.22 27.75,11.46 36.27,30.22 45.46,44.54" fill="#FFFFFF"/>
+  <polygon points="49.35,42.93 45.72,26.30 38.48,7.02 41.86,27.34 47.03,43.55" fill="#FFFFFF"/>
+  <polygon points="51.20,43.00 52.00,26.00 50.00,5.50 48.00,26.00 48.80,43.00" fill="#FFFFFF"/>
+  <polygon points="52.97,43.55 58.14,27.34 61.52,7.02 54.28,26.30 50.65,42.93" fill="#FFFFFF"/>
+  <polygon points="54.54,44.54 63.73,30.22 72.25,11.46 60.27,28.22 52.46,43.34" fill="#FFFFFF"/>
+  <polygon points="55.80,45.90 68.38,34.44 81.47,18.53 65.56,31.62 54.10,44.20" fill="#FFFFFF"/>
+  <polygon points="56.66,47.54 71.78,39.73 88.54,27.75 69.78,36.27 55.46,45.46" fill="#FFFFFF"/>
+  <polygon points="57.07,49.35 73.70,45.72 92.98,38.48 72.66,41.86 56.45,47.03" fill="#FFFFFF"/>
+  <circle cx="93.13" cy="55.68" r="1.8" fill="#FFFFFF"/>
+  <circle cx="90.19" cy="66.65" r="1.8" fill="#FFFFFF"/>
+  <circle cx="84.51" cy="76.48" r="1.8" fill="#FFFFFF"/>
+  <circle cx="76.48" cy="84.51" r="1.8" fill="#FFFFFF"/>
+  <circle cx="66.65" cy="90.19" r="1.8" fill="#FFFFFF"/>
+  <circle cx="55.68" cy="93.13" r="1.8" fill="#FFFFFF"/>
+  <circle cx="44.32" cy="93.13" r="1.8" fill="#FFFFFF"/>
+  <circle cx="33.35" cy="90.19" r="1.8" fill="#FFFFFF"/>
+  <circle cx="23.52" cy="84.51" r="1.8" fill="#FFFFFF"/>
+  <circle cx="15.49" cy="76.48" r="1.8" fill="#FFFFFF"/>
+  <circle cx="9.81" cy="66.65" r="1.8" fill="#FFFFFF"/>
+  <circle cx="6.87" cy="55.68" r="1.8" fill="#FFFFFF"/>
+  <circle cx="6.87" cy="44.32" r="1.8" fill="#FFFFFF"/>
+  <circle cx="9.81" cy="33.35" r="1.8" fill="#FFFFFF"/>
+  <circle cx="15.49" cy="23.52" r="1.8" fill="#FFFFFF"/>
+  <circle cx="23.52" cy="15.49" r="1.8" fill="#FFFFFF"/>
+  <circle cx="33.35" cy="9.81" r="1.8" fill="#FFFFFF"/>
+  <circle cx="44.32" cy="6.87" r="1.8" fill="#FFFFFF"/>
+  <circle cx="55.68" cy="6.87" r="1.8" fill="#FFFFFF"/>
+  <circle cx="66.65" cy="9.81" r="1.8" fill="#FFFFFF"/>
+  <circle cx="76.48" cy="15.49" r="1.8" fill="#FFFFFF"/>
+  <circle cx="84.51" cy="23.52" r="1.8" fill="#FFFFFF"/>
+  <circle cx="90.19" cy="33.35" r="1.8" fill="#FFFFFF"/>
+  <circle cx="93.13" cy="44.32" r="1.8" fill="#FFFFFF"/>
+  </svg>

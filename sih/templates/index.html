@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StandardMatch AI | Official GeM Portal & BIS Recommendation Engine</title>
+    <meta name="description"
+        content="AI-Powered BIS Standard Recommendation Engine integrated with Government e-Marketplace (GeM) Portal.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===================================================================
+         SECTION 1: OFFICIAL GeM PORTAL HOME PAGE (DEEP BLUE HEADER + WHITE CANVAS)
+         =================================================================== -->
+    <div id="hero-section" class="hero-wrapper">
+
+        <!-- Official Government of India Top Strip -->
+        <div class="gov-top-strip">
+            <div class="top-strip-inner">
+                <div class="gov-title">
+                    <i class="fa-solid fa-landmark"></i> Government e-Marketplace (GeM) & Bureau of Indian Standards
+                    (BIS) Portal
+                </div>
+                <div class="gov-links">
+                    <a href="https://gem.gov.in" target="_blank"><i class="fa-solid fa-external-link"></i> GeM
+                        Portal</a>
+                    <a href="https://www.services.bis.gov.in" target="_blank"><i class="fa-solid fa-external-link"></i>
+                        BIS Portal</a>
+                    <span><i class="fa-solid fa-shield-halved"></i> Public Procurement Cell</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Deep Blue Header Bar (#0A2540) with White Ashoka Chakra Icon -->
+        <header class="top-header">
+            <div class="brand-container">
+                <!-- Inline White Ashoka Chakra Brand Icon (renders reliably, no external asset needed) -->
+                <svg class="ashoka-chakra-white-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Ashoka Chakra">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="#FFFFFF" stroke-width="4"></circle>
+                    <circle cx="50" cy="50" r="4.5" fill="#FFFFFF"></circle>
+                    <g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round">
+                        <!-- 24 spokes -->
+                        <line x1="50" y1="50" x2="50" y2="6.5"></line>
+                        <line x1="50" y1="50" x2="61.28" y2="7.63"></line>
+                        <line x1="50" y1="50" x2="71.79" y2="11.94"></line>
+                        <line x1="50" y1="50" x2="80.86" y2="19.14"></line>
+                        <line x1="50" y1="50" x2="87.93" y2="28.79"></line>
+                        <line x1="50" y1="50" x2="92.5" y2="40.2"></line>
+                        <line x1="50" y1="50" x2="93.5" y2="52.5"></line>
+                        <line x1="50" y1="50" x2="91.06" y2="64.36"></line>
+                        <line x1="50" y1="50" x2="85.36" y2="74.85"></line>
+                        <line x1="50" y1="50" x2="76.85" y2="83.36"></line>
+                        <line x1="50" y1="50" x2="66.36" y2="89.06"></line>
+                        <line x1="50" y1="50" x2="54.5" y2="93.5"></line>
+                        <line x1="50" y1="50" x2="50" y2="93.5"></line>
+                        <line x1="50" y1="50" x2="38.72" y2="92.37"></line>
+                        <line x1="50" y1="50" x2="28.21" y2="88.06"></line>
+                        <line x1="50" y1="50" x2="19.14" y2="80.86"></line>
+                        <line x1="50" y1="50" x2="12.07" y2="71.21"></line>
+                        <line x1="50" y1="50" x2="7.5" y2="59.8"></line>
+                        <line x1="50" y1="50" x2="6.5" y2="47.5"></line>
+                        <line x1="50" y1="50" x2="8.94" y2="35.64"></line>
+                        <line x1="50" y1="50" x2="14.64" y2="25.15"></line>
+                        <line x1="50" y1="50" x2="23.15" y2="16.64"></line>
+                        <line x1="50" y1="50" x2="33.64" y2="10.94"></line>
+                        <line x1="50" y1="50" x2="45.5" y2="6.5"></line>
+                    </g>
+                </svg>
+                <div class="brand-title">StandardMatch <span class="brand-ai-text">AI</span></div>
+            </div>
+
+            <!-- Header Quick Nav Links -->
+            <div class="header-actions">
+                <nav class="header-nav-links">
+                    <a href="#hero-section" class="active">Home</a>
+                    <a href="javascript:void(0)" onclick="toggleSection('dashboard'); loadGemTenders();">GeM Live
+                        Bids</a>
+                    <a href="javascript:void(0)" onclick="scrollToFeatures()">Platform Features</a>
+                </nav>
+                <button class="btn-primary" onclick="toggleSection('dashboard')">
+                    Launch Matcher <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main First Page Content Banner (Clean White Canvas Background) -->
+        <main class="hero-content">
+            <div class="hero-pill">
+                <i class="fa-solid fa-building-columns"></i> Government e-Marketplace (GeM) & BIS Procurement AI
+            </div>
+
+            <!-- High Contrast Dark Title on White Canvas -->
+            <h1 class="hero-title">
+                Match GeM Tenders & Specs to <span>BIS Standards</span> Instantly
+            </h1>
+
+            <!-- High Contrast Crisp Slate Description -->
+            <p class="hero-description">
+                StandardMatch AI powers official public procurement by cross-referencing Government e-Marketplace (GeM)
+                tender bids with authoritative Bureau of Indian Standards (BIS) specifications using NLP vectorization.
+            </p>
+
+            <div style="display: flex; gap: 1.25rem; justify-content: center; margin-bottom: 2.5rem; flex-wrap: wrap;">
+                <button class="btn-primary" onclick="toggleSection('dashboard')" id="btn-hero-launch">
+                    <i class="fa-solid fa-bolt"></i> Launch Matcher Dashboard
+                </button>
+                <button class="btn-secondary" onclick="toggleSection('dashboard'); loadGemTenders();">
+                    <i class="fa-solid fa-building-columns"></i> Browse GeM Live Bids
+                </button>
+            </div>
+
+            <!-- Interactive Sample Query Chips on Crisp White Surface -->
+            <div class="sample-queries-wrapper">
+                <div class="sample-queries-label">
+                    <i class="fa-solid fa-lightbulb" style="color: var(--gem-orange-hover);"></i> Try High-Priority GeM
+                    Procurement Specs
+                </div>
+                <div class="chip-container">
+                    <div class="query-chip"
+                        onclick="quickSearch('Self-ballasted LED street light lamp 60W 240V high efficiency CRI 80')">
+                        <i class="fa-solid fa-lightbulb"></i> GeM LED Street Light Tender
+                    </div>
+                    <div class="query-chip"
+                        onclick="quickSearch('PVC insulated multicore cable 1100V copper conductor flame retardant')">
+                        <i class="fa-solid fa-plug"></i> GeM PVC Armoured Cable 1100V
+                    </div>
+                    <div class="query-chip"
+                        onclick="quickSearch('Crystalline silicon terrestrial photovoltaic PV module thermal cycling damp heat')">
+                        <i class="fa-solid fa-solar-panel"></i> GeM Solar PV Module Tender
+                    </div>
+                    <div class="query-chip"
+                        onclick="quickSearch('Outdoor oil immersed distribution transformer 33kV 2500kVA low total losses')">
+                        <i class="fa-solid fa-bolt"></i> GeM 33kV Distribution Transformer
+                    </div>
+                    <div class="query-chip"
+                        onclick="quickSearch('AC static watt hour meter class 1 accuracy EMC tamper detection')">
+                        <i class="fa-solid fa-gauge-high"></i> GeM Smart Energy Meter
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- HIGH-CONTRAST FEATURE BLOCKS ON WHITE CANVAS -->
+        <div id="features-grid" class="hero-features">
+            <!-- Feature 1: GeM Integration (GeM Orange Accent) -->
+            <div class="feature-card feature-gem">
+                <div class="feature-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="feature-badge">GeM Portal</div>
+                <div class="feature-title">GeM Live Bids Integration</div>
+                <div class="feature-desc">
+                    Fetch active GeM procurement bids, extract item specifications, and generate mandatory GeM
+                    compliance clauses.
+                </div>
+            </div>
+
+            <!-- Feature 2: NLP Matcher (Electric Cyan/Blue Accent) -->
+            <div class="feature-card feature-nlp">
+                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="feature-badge">AI Core</div>
+                <div class="feature-title">NLP Matching Engine</div>
+                <div class="feature-desc">
+                    Combines title, description, and category details using TF-IDF vectorization and cosine similarity
+                    scoring.
+                </div>
+            </div>
+
+            <!-- Feature 3: PyPDF2 Ingestor (Amber Saffron Accent) -->
+            <div class="feature-card feature-pdf">
+                <div class="feature-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                <div class="feature-badge">PyPDF2 Tool</div>
+                <div class="feature-title">PyPDF2 Document Ingestion</div>
+                <div class="feature-desc">
+                    Extracts, cleans, and indexes regulatory PDF documents live into the database for real-time
+                    specification matching.
+                </div>
+            </div>
+
+            <!-- Feature 4: BIS Audit Compliance (Emerald Green Accent) -->
+            <div class="feature-card feature-bis">
+                <div class="feature-icon"><i class="fa-solid fa-shield-circle-check"></i></div>
+                <div class="feature-badge">100% Audit</div>
+                <div class="feature-title">BIS Compliance Audit</div>
+                <div class="feature-desc">
+                    Eliminates manual standard cross-referencing for government officers, ensuring exact compliance with
+                    Indian Standards.
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="hero-footer">
+            StandardMatch AI &bull; Government e-Marketplace (GeM) & Bureau of Indian Standards (BIS) Integration Portal
+        </footer>
+    </div>
+
+
+    <!-- ===================================================================
+         SECTION 2: MAIN APPLICATION DASHBOARD (SPA VIEW)
+         =================================================================== -->
+    <div id="dashboard-section" class="dashboard-wrapper">
+
+        <!-- Dashboard Top Navigation Bar (Deep Navy #0A2540) -->
+        <nav class="dash-nav">
+            <div class="dash-nav-brand" onclick="toggleSection('hero')">
+                <svg class="ashoka-chakra-white-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Ashoka Chakra" style="width: 36px; height: 36px;">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="#FFFFFF" stroke-width="4"></circle>
+                    <circle cx="50" cy="50" r="4.5" fill="#FFFFFF"></circle>
+                    <g stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round">
+                        <line x1="50" y1="50" x2="50" y2="6.5"></line>
+                        <line x1="50" y1="50" x2="61.28" y2="7.63"></line>
+                        <line x1="50" y1="50" x2="71.79" y2="11.94"></line>
+                        <line x1="50" y1="50" x2="80.86" y2="19.14"></line>
+                        <line x1="50" y1="50" x2="87.93" y2="28.79"></line>
+                        <line x1="50" y1="50" x2="92.5" y2="40.2"></line>
+                        <line x1="50" y1="50" x2="93.5" y2="52.5"></line>
+                        <line x1="50" y1="50" x2="91.06" y2="64.36"></line>
+                        <line x1="50" y1="50" x2="85.36" y2="74.85"></line>
+                        <line x1="50" y1="50" x2="76.85" y2="83.36"></line>
+                        <line x1="50" y1="50" x2="66.36" y2="89.06"></line>
+                        <line x1="50" y1="50" x2="54.5" y2="93.5"></line>
+                        <line x1="50" y1="50" x2="50" y2="93.5"></line>
+                        <line x1="50" y1="50" x2="38.72" y2="92.37"></line>
+                        <line x1="50" y1="50" x2="28.21" y2="88.06"></line>
+                        <line x1="50" y1="50" x2="19.14" y2="80.86"></line>
+                        <line x1="50" y1="50" x2="12.07" y2="71.21"></line>
+                        <line x1="50" y1="50" x2="7.5" y2="59.8"></line>
+                        <line x1="50" y1="50" x2="6.5" y2="47.5"></line>
+                        <line x1="50" y1="50" x2="8.94" y2="35.64"></line>
+                        <line x1="50" y1="50" x2="14.64" y2="25.15"></line>
+                        <line x1="50" y1="50" x2="23.15" y2="16.64"></line>
+                        <line x1="50" y1="50" x2="33.64" y2="10.94"></line>
+                        <line x1="50" y1="50" x2="45.5" y2="6.5"></line>
+                    </g>
+                </svg>
+
+                <div style="font-size: 1.3rem; font-weight: 800; color: #FFFFFF;">
+                    StandardMatch <span class="brand-ai-text">AI</span>
+                </div>
+            </div>
+
+            <div class="dash-nav-links">
+                <span class="gem-badge-nav">
+                    <i class="fa-solid fa-circle-check"></i> GeM Live Integrated
+                </span>
+                <button class="nav-btn" onclick="toggleSection('hero')">
+                    <i class="fa-solid fa-house"></i> Home Overview
+                </button>
+            </div>
+        </nav>
+
+        <!-- Dashboard Main Grid Container -->
+        <div class="dashboard-container">
+
+            <!-- LEFT PANEL: Distinct Feature Panels -->
+            <div class="left-panel">
+
+                <!-- Panel 1: Specs Search Form -->
+                <div class="panel-card panel-search-card">
+                    <div class="panel-header">
+                        <div class="panel-title" style="color: var(--gov-blue-header);">
+                            <i class="fa-solid fa-magnifying-glass" style="color: var(--gov-blue-header);"></i> Tender
+                            Specification
+                        </div>
+                        <button
+                            style="background: none; border: none; color: var(--text-dark-muted); cursor: pointer; font-size: 0.85rem;"
+                            onclick="clearSearch()">
+                            <i class="fa-solid fa-rotate-left"></i> Clear
+                        </button>
+                    </div>
+
+                    <form id="recommend-form" onsubmit="handleSearch(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="query-input">Procurement / Technical Requirement</label>
+                            <textarea id="query-input" class="spec-textarea"
+                                placeholder="Paste tender description, specs, electrical cable ratings, LED lamp wattage, transformer specifications, etc..."></textarea>
+                        </div>
+
+                        <!-- Sample Loaders -->
+                        <div class="form-group">
+                            <label class="form-label">Quick Spec Loader</label>
+                            <select class="select-input" onchange="loadPresetQuery(this.value)">
+                                <option value="">-- Choose Preset Spec --</option>
+                                <option
+                                    value="Self-ballasted LED lamps for general lighting services rated 60W safety and luminous flux efficacy CRI 80">
+                                    LED Lamp Safety & Performance (IS 16102)</option>
+                                <option
+                                    value="Polyvinyl chloride PVC insulated multicore flexible cable 1100V copper conductor flame retardant">
+                                    PVC Insulated Cables 1100V (IS 694)</option>
+                                <option
+                                    value="Outdoor oil immersed distribution transformer 33kV up to 2500 kVA total loss limits energy efficiency">
+                                    33kV Distribution Transformer (IS 1180)</option>
+                                <option
+                                    value="Crystalline silicon terrestrial photovoltaic PV module design qualification damp heat test">
+                                    Solar PV Module Qualification (IS 14286)</option>
+                                <option
+                                    value="AC static watt-hour meters class 1 accuracy active electrical energy tamper proof">
+                                    Static Watt-Hour Energy Meter (IS 13779)</option>
+                            </select>
+                        </div>
+
+                        <!-- Match Threshold Slider -->
+                        <div class="form-group">
+                            <div class="slider-header">
+                                <label class="form-label" for="threshold-slider" style="margin:0;">Min Match
+                                    Threshold</label>
+                                <span id="threshold-val" class="slider-val">1.0%</span>
+                            </div>
+                            <input type="range" id="threshold-slider" class="custom-range" min="0" max="50" step="1"
+                                value="1" oninput="updateThresholdLabel(this.value)">
+                        </div>
+
+                        <!-- Top N selector -->
+                        <div class="form-group">
+                            <label class="form-label" for="top-n-select">Max Results</label>
+                            <select id="top-n-select" class="select-input">
+                                <option value="3" selected>Top 3 Matches (Recommended)</option>
+                                <option value="5">Top 5 Matches</option>
+                                <option value="10">Top 10 Matches</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-search" id="btn-search-submit">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span id="btn-search-text">Find Matching BIS Standards</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Panel 2: GeM Active Tenders Section -->
+                <div class="panel-card panel-gem-card">
+                    <div class="panel-header">
+                        <div class="panel-title" style="color: var(--gem-orange-hover);">
+                            <i class="fa-solid fa-building-columns"></i> GeM Portal Active Tenders
+                        </div>
+                        <button
+                            style="background: transparent; border: none; color: var(--gem-orange-hover); font-weight: 700; font-size: 0.78rem; cursor: pointer;"
+                            onclick="loadGemTenders()">
+                            <i class="fa-solid fa-arrows-rotate"></i> Load Live
+                        </button>
+                    </div>
+
+                    <div id="gem-tenders-list"
+                        style="max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div
+                            style="text-align: center; color: var(--text-dark-muted); font-size: 0.85rem; padding: 1rem;">
+                            Click "Load Live" to view active Government e-Marketplace (GeM) Bids.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: PyPDF2 Ingestion Tool -->
+                <div class="panel-card panel-pdf-card">
+                    <div class="panel-header">
+                        <div class="panel-title" style="color: var(--pdf-amber-text);">
+                            <i class="fa-solid fa-file-arrow-up"></i> PyPDF2 Ingestion Tool
+                        </div>
+                        <span
+                            style="font-size: 0.75rem; background: #fff7ed; color: #c2410c; padding: 0.2rem 0.5rem; border-radius: 10px; font-weight: 700;">PyPDF2
+                            Live</span>
+                    </div>
+
+                    <form id="pdf-upload-form" onsubmit="handlePdfUpload(event)">
+                        <div class="pdf-upload-box" onclick="document.getElementById('pdf-file-input').click()">
+                            <div class="pdf-upload-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--gov-blue-header);"
+                                id="pdf-file-label">
+                                Click or Drag PDF standard here
+                            </div>
+                            <div style="font-size: 0.78rem; color: var(--text-dark-muted);">
+                                Extracts raw text & hot-reloads TF-IDF index
+                            </div>
+                            <input type="file" id="pdf-file-input" accept=".pdf" style="display: none;"
+                                onchange="updatePdfFileName(this)">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="pdf-std-no" class="select-input"
+                                placeholder="Standard No (e.g. IS 15885)">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="pdf-title" class="select-input" placeholder="Standard Title">
+                        </div>
+
+                        <button type="submit" class="btn-secondary"
+                            style="width: 100%; justify-content: center; color: var(--gov-blue-header); border-color: var(--card-border);"
+                            id="btn-pdf-upload">
+                            <i class="fa-solid fa-upload"></i> Upload & Hot-Reload Index
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL: Recommendation Results -->
+            <div class="right-panel">
+
+                <!-- Results Header Summary -->
+                <div class="results-header-bar">
+                    <div>
+                        <div class="results-summary-title" id="results-title">Matched Standards</div>
+                        <div style="font-size: 0.85rem; color: var(--text-dark-muted);" id="results-subtitle">
+                            Enter procurement specifications on the left or select a GeM Tender to match BIS standards.
+                        </div>
+                    </div>
+                    <div class="results-meta" id="results-meta">
+                        <!-- Appended by JS -->
+                    </div>
+                </div>
+
+                <!-- Results List Container -->
+                <div id="results-container" class="result-cards-list">
+                    <!-- Default Empty State -->
+                    <div class="empty-state">
+                        <div class="empty-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <div class="empty-title">Ready for Specification & GeM Analysis</div>
+                        <div class="empty-desc">
+                            StandardMatch AI uses TF-IDF Vectorization to recommend official Bureau of Indian Standards
+                            matching your tender query or GeM Bid specifications.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i> <span id="toast-message">Notification</span>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
